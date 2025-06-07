@@ -1,5 +1,7 @@
+package Tipos;
+
 public class Grafo {
-    private Elemento raiz;
+    private ElementoSimples raiz;
     private int qtdeElementos;
 
     public Grafo() {
@@ -7,11 +9,11 @@ public class Grafo {
         this.qtdeElementos = 0;
     }
 
-    public Elemento getRaiz() {
+    public ElementoSimples getRaiz() {
         return raiz;
     }
 
-    public void setRaiz(Elemento raiz) {
+    public void setRaiz(ElementoSimples raiz) {
         this.raiz = raiz;
     }
 

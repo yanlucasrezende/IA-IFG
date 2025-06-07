@@ -1,32 +1,34 @@
-public class Elemento {
-    private Elemento esquerda;
-    private Elemento direita;
-    private Elemento pai;
+package Tipos;
+
+public class ElementoSimples {
+    private ElementoSimples esquerda;
+    private ElementoSimples direita;
+    private ElementoSimples pai;
     private Character id;
     private boolean visitado = false;
 
-    public Elemento(Elemento pai, Character id) {
+    public ElementoSimples(ElementoSimples pai, Character id) {
         this.pai = pai;
         this.id = id;
     }
 
-    public Elemento getEsquerda() {
+    public ElementoSimples getEsquerda() {
         return esquerda;
     }
 
-    public void setEsquerda(Elemento esquerda) {
+    public void setEsquerda(ElementoSimples esquerda) {
         this.esquerda = esquerda;
     }
 
-    public Elemento getDireita() {
+    public ElementoSimples getDireita() {
         return direita;
     }
 
-    public void setDireita(Elemento direita) {
+    public void setDireita(ElementoSimples direita) {
         this.direita = direita;
     }
 
-    public Elemento getPai() {
+    public ElementoSimples getPai() {
         return pai;
     }
 

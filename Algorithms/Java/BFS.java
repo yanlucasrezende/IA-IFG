@@ -1,11 +1,13 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
+import Tipos.*;
+
 public class BFS {
 
     public static void main(String[] args) {
         Grafo grafo = Util.inicializaGrafoSimples();
-        Elemento raiz = grafo.getRaiz();
+        ElementoSimples raiz = grafo.getRaiz();
 
         System.out.println("\nElemento raiz: " + raiz.printElementoAmigavel() + '\n');
 
@@ -21,7 +23,7 @@ public class BFS {
         System.out.println("Prioridade direita: " + resultadoDireita + "\n");
     }
 
-    public static String buscaLarguraEsq(Elemento raiz, Character objetivo) {
+    public static String buscaLarguraEsq(ElementoSimples raiz, Character objetivo) {
         if (raiz == null) {
             return "Árvore vazia";
         }
@@ -34,7 +36,7 @@ public class BFS {
         StringBuilder caminho = new StringBuilder("");
         String solucao = null;
 
-        Queue<Elemento> fila = new LinkedList<>();
+        Queue<ElementoSimples> fila = new LinkedList<>();
 
         if (raiz.getEsquerda() != null) {
             fila.offer(raiz.getEsquerda());
@@ -49,7 +51,7 @@ public class BFS {
         }
 
         while (!fila.isEmpty()) {
-            Elemento atual = fila.poll();
+            ElementoSimples atual = fila.poll();
             if (atual == null) {
                 continue;
             }
@@ -80,7 +82,7 @@ public class BFS {
                 "Solução: " + solucao;
     }
 
-    public static String buscaLarguraDir(Elemento raiz, Character objetivo) {
+    public static String buscaLarguraDir(ElementoSimples raiz, Character objetivo) {
         if (raiz == null) {
             return "Árvore vazia";
         }
@@ -93,7 +95,7 @@ public class BFS {
         StringBuilder caminho = new StringBuilder("");
         String solucao = null;
 
-        Queue<Elemento> fila = new LinkedList<>();
+        Queue<ElementoSimples> fila = new LinkedList<>();
 
         if (raiz.getDireita() != null) {
             fila.offer(raiz.getDireita());
@@ -108,7 +110,7 @@ public class BFS {
         }
 
         while (!fila.isEmpty()) {
-            Elemento atual = fila.poll();
+            ElementoSimples atual = fila.poll();
             if (atual == null) {
                 continue;
             }

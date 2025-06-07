@@ -1,3 +1,5 @@
+import Tipos.*;
+
 public class DFS {
     public static int QTD_ELEMENTOS = 0;
 
@@ -5,7 +7,7 @@ public class DFS {
 
         Grafo grafo = Util.inicializaGrafoSimples();
 
-        Elemento raiz = grafo.getRaiz();
+        ElementoSimples raiz = grafo.getRaiz();
         QTD_ELEMENTOS = grafo.getQtdeElementos();
 
         System.out.println("\nQuantidade de elementos: " + grafo.getQtdeElementos());
@@ -23,7 +25,7 @@ public class DFS {
         System.out.println("Prioridade direita: " + resultadoDireita + "\n");
     }
 
-    public static String buscaProfundidadeEsq(Elemento raiz, Character objetivo) {
+    public static String buscaProfundidadeEsq(ElementoSimples raiz, Character objetivo) {
         if (raiz == null) {
             return "Árvore vazia";
         }
@@ -35,7 +37,7 @@ public class DFS {
         StringBuilder caminho = new StringBuilder("");
         String solucao = null;
 
-        Elemento elemento = raiz.getEsquerda() != null ? raiz.getEsquerda() : raiz.getDireita();
+        ElementoSimples elemento = raiz.getEsquerda() != null ? raiz.getEsquerda() : raiz.getDireita();
 
         if (elemento == null) {
             return "Objetivo não encontrado pois a árvore está vazia!";
@@ -56,9 +58,9 @@ public class DFS {
             }
             elemento.setVisitado(true);
 
-            Elemento esq = elemento.getEsquerda();
-            Elemento dir = elemento.getDireita();
-            Elemento pai = elemento.getPai();
+            ElementoSimples esq = elemento.getEsquerda();
+            ElementoSimples dir = elemento.getDireita();
+            ElementoSimples pai = elemento.getPai();
 
             if (esq != null && !esq.isVisitado()) {
                 caminho.append(elemento.getId() + " vai " + esq.getId());
@@ -89,7 +91,7 @@ public class DFS {
         }
     }
 
-    public static String buscaProfundidadeDir(Elemento raiz, Character objetivo) {
+    public static String buscaProfundidadeDir(ElementoSimples raiz, Character objetivo) {
         if (raiz == null) {
             return "Árvore vazia";
         }
@@ -101,7 +103,7 @@ public class DFS {
         StringBuilder caminho = new StringBuilder("");
         String solucao = null;
 
-        Elemento elemento = raiz.getDireita() != null ? raiz.getDireita() : raiz.getEsquerda();
+        ElementoSimples elemento = raiz.getDireita() != null ? raiz.getDireita() : raiz.getEsquerda();
 
         if (elemento == null) {
             return "Objetivo não encontrado pois a árvore está vazia!";
@@ -122,9 +124,9 @@ public class DFS {
             }
             elemento.setVisitado(true);
 
-            Elemento esq = elemento.getEsquerda();
-            Elemento dir = elemento.getDireita();
-            Elemento pai = elemento.getPai();
+            ElementoSimples esq = elemento.getEsquerda();
+            ElementoSimples dir = elemento.getDireita();
+            ElementoSimples pai = elemento.getPai();
 
             if (dir != null && !dir.isVisitado()) {
                 caminho.append(elemento.getId() + " vai " + dir.getId());

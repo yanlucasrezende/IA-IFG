@@ -1,23 +1,26 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import Tipos.ElementoSimples;
+import Tipos.Grafo;
+
 public class Util {
 
     public static Grafo inicializaGrafoSimples() {
         Grafo grafo = new Grafo();
         // Inicio
-        Elemento s = new Elemento(null, 'S');
+        ElementoSimples s = new ElementoSimples(null, 'S');
         // 2 nivel
-        Elemento a = new Elemento(s, 'A');
-        Elemento b = new Elemento(s, 'B');
+        ElementoSimples a = new ElementoSimples(s, 'A');
+        ElementoSimples b = new ElementoSimples(s, 'B');
         // 3 nivel
-        Elemento d = new Elemento(a, 'D');
-        Elemento c = new Elemento(a, 'C');
-        Elemento e = new Elemento(b, 'E');
-        Elemento f = new Elemento(b, 'F');
+        ElementoSimples d = new ElementoSimples(a, 'D');
+        ElementoSimples c = new ElementoSimples(a, 'C');
+        ElementoSimples e = new ElementoSimples(b, 'E');
+        ElementoSimples f = new ElementoSimples(b, 'F');
         // 4 nivel
-        Elemento g = new Elemento(f, 'G');
-        Elemento h = new Elemento(d, 'G');
+        ElementoSimples g = new ElementoSimples(f, 'G');
+        ElementoSimples h = new ElementoSimples(d, 'G');
 
         s.setDireita(a);
         s.setEsquerda(b);
@@ -38,14 +41,14 @@ public class Util {
         return grafo;
     }
 
-    public static String caminhoElementoParaRaiz(Elemento elemento) {
+    public static String caminhoElementoParaRaiz(ElementoSimples elemento) {
         if (elemento == null) {
             return "Caminho não encontrado!";
         }
-        List<Elemento> caminho = new ArrayList<>();
+        List<ElementoSimples> caminho = new ArrayList<>();
 
         caminho.add(elemento);
-        Elemento pai = elemento.getPai();
+        ElementoSimples pai = elemento.getPai();
 
         while (pai != null) {
             caminho.add(pai);
@@ -55,7 +58,7 @@ public class Util {
         caminho = caminho.reversed();
         StringBuilder sb = new StringBuilder();
 
-        for (Elemento e : caminho) {
+        for (ElementoSimples e : caminho) {
             sb.append(e.getId()).append(" -> ");
         }
         // Remover a última seta

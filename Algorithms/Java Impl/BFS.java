@@ -7,6 +7,9 @@ public class BFS {
 
     public static void main(String[] args) {
         Elemento raiz = inicializaGrafo();
+
+        System.out.println("Elemento raiz: " + raiz.printElementoAmigavel());
+
         String resultadoEsquerda = buscaLarguraEsq(raiz, 'G');
         String resultadoDireita = buscaLarguraDir(raiz, 'G');
 

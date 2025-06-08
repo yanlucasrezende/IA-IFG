@@ -11,7 +11,7 @@ public class BFS {
 
         System.out.println("\nElemento raiz: " + raiz.printElementoAmigavel() + '\n');
 
-        Character objetivo = 'D';
+        Character objetivo = 'H';
 
         String resultadoEsquerda = buscaLarguraEsq(raiz, objetivo);
         String resultadoDireita = buscaLarguraDir(raiz, objetivo);

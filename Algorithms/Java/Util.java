@@ -20,7 +20,7 @@ public class Util {
         ElementoSimples f = new ElementoSimples(b, 'F');
         // 4 nivel
         ElementoSimples g = new ElementoSimples(f, 'G');
-        ElementoSimples h = new ElementoSimples(d, 'G');
+        ElementoSimples h = new ElementoSimples(d, 'H');
 
         s.setDireita(a);
         s.setEsquerda(b);

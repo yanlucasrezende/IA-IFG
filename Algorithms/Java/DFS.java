@@ -13,7 +13,7 @@ public class DFS {
         System.out.println("\nQuantidade de elementos: " + grafo.getQtdeElementos());
         System.out.println("Elemento raiz: " + raiz.printElementoAmigavel() + '\n');
 
-        Character objetivo = 'A';
+        Character objetivo = 'G';
 
         String resultadoEsquerda = buscaProfundidadeEsq(raiz, objetivo);
         String resultadoDireita = buscaProfundidadeDir(raiz, objetivo);

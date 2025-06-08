@@ -9,18 +9,20 @@ public class BFS {
         Grafo grafo = Util.inicializaGrafoSimples();
         ElementoSimples raiz = grafo.getRaiz();
 
-        System.out.println("\nElemento raiz: " + raiz.printElementoAmigavel() + '\n');
+        System.out.println("\nElemento raiz BFS: " + raiz.printElementoAmigavel() + '\n');
 
         Character objetivo = 'H';
 
         String resultadoEsquerda = buscaLarguraEsq(raiz, objetivo);
         String resultadoDireita = buscaLarguraDir(raiz, objetivo);
 
-        // Imprime o resultado da busca em largura
-        // um priorizando a esquerda e o outro a direita
-        // durante a busca do resultado
-        System.out.println("Prioridade esquerda: " + resultadoEsquerda + "\n");
-        System.out.println("Prioridade direita: " + resultadoDireita + "\n");
+        System.out.println("############### Prioridade esquerda ############### \n");
+        System.out.println(resultadoEsquerda);
+        System.out.println("\n################################################### \n");
+
+        System.out.println("############### Prioridade direita ############### \n");
+        System.out.println(resultadoDireita);
+        System.out.println("\n################################################### \n");
     }
 
     public static String buscaLarguraEsq(ElementoSimples raiz, Character objetivo) {

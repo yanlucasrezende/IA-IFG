@@ -16,6 +16,7 @@ public class Util {
         // 3 nivel
         ElementoSimples d = new ElementoSimples(a, 'D');
         ElementoSimples c = new ElementoSimples(a, 'C');
+        
         ElementoSimples e = new ElementoSimples(b, 'E');
         ElementoSimples f = new ElementoSimples(b, 'F');
         // 4 nivel

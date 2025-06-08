@@ -14,6 +14,8 @@ public class BFS {
         Character objetivo = 'H';
 
         String resultadoEsquerda = buscaLarguraEsq(raiz, objetivo);
+        grafo = Util.inicializaGrafoSimples();
+        raiz = grafo.getRaiz();
         String resultadoDireita = buscaLarguraDir(raiz, objetivo);
 
         System.out.println("############### Prioridade esquerda ############### \n");

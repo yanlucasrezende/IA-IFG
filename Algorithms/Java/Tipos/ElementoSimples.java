@@ -45,21 +45,8 @@ public class ElementoSimples {
     }
 
     public String printElementoAmigavel() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(id);
-        if (esquerda != null || direita != null) {
-            sb.append(" -> [Esq: ");
-            if (esquerda != null) {
-                sb.append(esquerda.id);
-            }
-            if (direita != null) {
-                if (esquerda != null) {
-                    sb.append(", Dir: ");
-                }
-                sb.append(direita.id);
-            }
-            sb.append("]");
-        }
-        return sb.toString();
+        String esq = (esquerda != null) ? esquerda.id.toString() : "null";
+        String dir = (direita != null) ? direita.id.toString() : "null";
+        return id + " -> [Esq: " + esq + ", Dir: " + dir + "]";
     }
 }

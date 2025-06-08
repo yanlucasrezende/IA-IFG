@@ -1,8 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import Tipos.ElementoSimples;
-import Tipos.Grafo;
+import Tipos.*;
 
 public class Util {
 
@@ -38,6 +37,40 @@ public class Util {
 
         grafo.setRaiz(s);
         grafo.setQtdeElementos(9);
+
+        return grafo;
+    }
+
+    public static GrafoComplexo inicializaGrafoComplexo() {
+        GrafoComplexo grafo = new GrafoComplexo();
+
+        ElementoComplexo s = new ElementoComplexo('S', 10);
+        ElementoComplexo a = new ElementoComplexo('A', 8);
+        ElementoComplexo b = new ElementoComplexo('B', 7);
+        ElementoComplexo c = new ElementoComplexo('C', 6);
+        ElementoComplexo d = new ElementoComplexo('D', 5);
+        ElementoComplexo e = new ElementoComplexo('E', 4);
+        ElementoComplexo f = new ElementoComplexo('F', 3);
+        ElementoComplexo g = new ElementoComplexo('G', 0);
+
+        s.adicionarVizinho(a, 2);
+        s.adicionarVizinho(b, 5);
+        s.adicionarVizinho(c, 4);
+
+        a.adicionarVizinho(d, 7);
+        a.adicionarVizinho(e, 3);
+
+        b.adicionarVizinho(e, 6);
+        b.adicionarVizinho(f, 3);
+
+        c.adicionarVizinho(f, 4);
+
+        d.adicionarVizinho(g, 3);
+        e.adicionarVizinho(g, 2);
+        f.adicionarVizinho(g, 4);
+
+        grafo.setRaiz(s);
+        grafo.setQtdeElementos(8);
 
         return grafo;
     }

@@ -3,7 +3,7 @@ import java.util.Queue;
 
 import Tipos.*;
 
-public class BFS {
+public class BreadthFirstSearch {
 
     public static void main(String[] args) {
         Grafo grafo = Util.inicializaGrafoSimples();

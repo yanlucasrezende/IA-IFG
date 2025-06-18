@@ -1,6 +1,6 @@
 import Tipos.*;
 
-public class DFS {
+public class DepthFirstSearch {
     public static int QTD_ELEMENTOS = 0;
 
     public static void main(String[] args) {

@@ -1,15 +1,16 @@
 package Tipos;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
-
 
 public class ElementoComplexo {
     private final Character id;
     private int heuristica;
     private Map<ElementoComplexo, Integer> vizinhos = new HashMap<>();
-    private ElementoComplexo pai;
     private boolean visitado = false;
+    private List<Path> caminhos = new ArrayList<>();
 
     public ElementoComplexo(Character id, int heuristica) {
         this.id = id;
@@ -34,14 +35,6 @@ public class ElementoComplexo {
 
     public Map<ElementoComplexo, Integer> getVizinhos() {
         return vizinhos;
-    }
-
-    public ElementoComplexo getPai() {
-        return pai;
-    }
-
-    public void setPai(ElementoComplexo pai) {
-        this.pai = pai;
     }
 
     public boolean isVisitado() {
